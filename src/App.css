@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@plugin "daisyui";
+* {
+  cursor: none;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5b900;
+}
+
+
+
+.cursor {
+  
+  
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Lay%27s_logo_2019.svg/960px-Lay%27s_logo_2019.svg.png");
+background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+   .arrow {
+          width: 20px;
+          height: 20px;
+          border: 4px solid  ;
+          color: #f5b900;
+          border-top: 0;
+          border-left: 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          margin-bottom: 20px;
+        }
+        /* Birinchi qator: 0-3-6 (tepa) */
+         .arrow-0, .arrow-3, .arrow-6 {
+          animation: arrows 4s infinite;
+          animation-delay: 0s;}
+
+        /* Ikkinchi qator: 1-4-7 (o'rta) */
+        .arrow-1, .arrow-4, .arrow-7 {
+          animation: arrows 4s infinite;
+          animation-delay: 0.4s;
+        }
+
+        /* Uchinchi qator: 2-5-8 (pastki) */
+        .arrow-2, .arrow-5, .arrow-8 {
+          animation: arrows 4s infinite;
+          animation-delay: 0.8s;
+        }
+
+        @keyframes arrows {
+          0% {
+            opacity: 0;
+            transform: translateY(0) rotate(45deg);
+          }
+          15% {
+            opacity: 1;
+            transform: translateY(12px) rotate(45deg);
+          }
+          30% {
+            opacity: 1;
+          }
+          45% {
+            opacity: 0;
+            transform: translateY(12px) rotate(45deg);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(12px) rotate(45deg);
+          }
+        }
+     
